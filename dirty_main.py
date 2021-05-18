@@ -1,10 +1,13 @@
-from application.salary import *
-from db.people import *
+from application import *
 from datetime import *
 
 if __name__ == '__main__':
-    pay = Payments()
+    print("dirty_main.py")
+
+    pay = salary.Payments()
     pay.calculate_salary()
-    empl = Employees()
-    empl.get_employees()
-    print(datetime.today())
+
+    emp = people.Employees()
+    emp.get_employees()
+
+    print(f"Текущая дата: {datetime.today().strftime('%x')}")
